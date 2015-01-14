@@ -1,0 +1,32 @@
+<project name="HelloStelligent" default="tomcat.deploy" basedir=".">
+
+<property name="tomcat.dir" value="/usr/share/tomcat6/"/>
+
+<property name="deploy.url" value="http://127.0.0.1:8080/manager"/>
+<property name="deploy.user" value="admin"/>
+<property name="deploy.pass" value="password"/>
+<property name="deploy.context" value="/"/>
+
+<path id="dependency.path">
+  <fileset dir="${tomcat.dir}" includes="lib/*.jar" />
+</path>
+
+<taskdef resource="org/apache/catalina/ant/catalina.tasks" classpathref="dependency.path" />
+
+<target name="tomcat.undeploy">
+  <undeploy url="${deploy.url}" failOnError="false" username="${deploy.user}" password="${deploy.pass}" path="${deploy.context}"/>
+</target>
+
+<target name="tomcat.deploy">
+  <deploy url="${deploy.url}" username="${deploy.user}" password="${deploy.pass}" path="${deploy.context}" war="${deploy.war}"/>
+</target>
+        
+<target name="tomcat.start">
+  <start url="${deploy.url}" failOnError="false" username="${deploy.user}" password="${deploy.pass}" path="${deploy.context}"/>
+</target>
+        
+<target name="tomcat.stop"> 
+  <stop url="${deploy.url}" failOnError="false" username="${deploy.user}" password="${deploy.pass}" path="${deploy.context}"/>
+</target>
+
+</project>
