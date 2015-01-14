@@ -1,7 +1,5 @@
 <project name="HelloStelligent" default="tomcat.deploy" basedir=".">
 
-<property name="tomcat.dir" value="/usr/share/tomcat6/"/>
-
 <property name="deploy.url" value="http://127.0.0.1:8080/manager"/>
 <property name="deploy.context" value="/"/>
 
