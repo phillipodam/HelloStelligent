@@ -1,12 +1,6 @@
 #!/bin/bash
 
-TOMCATDIR=/usr/share/tomcat6
-USERNAME=admin
-PASSWORD=password
-
-yum -y install tomcat6-admin-webapps
-
-sed -s "s/<\/tomcat-users>/<user username=\"${USERNAME}\" password=\"${PASSWORD}\" roles=\"manager,admin,manager-script\"\/>\n<\/tomcat-users>/" ${TOMCATDIR}/conf/tomcat-users.xml
+. settings.conf
 
 mvn clean install
 
