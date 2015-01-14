@@ -3,8 +3,6 @@
 <property name="tomcat.dir" value="/usr/share/tomcat6/"/>
 
 <property name="deploy.url" value="http://127.0.0.1:8080/manager"/>
-<property name="deploy.user" value="admin"/>
-<property name="deploy.pass" value="password"/>
 <property name="deploy.context" value="/"/>
 
 <path id="dependency.path">
