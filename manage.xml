@@ -13,7 +13,7 @@
   <undeploy url="${deploy.url}" failOnError="false" username="${deploy.user}" password="${deploy.pass}" path="${deploy.context}"/>
 </target>
 
-<target name="tomcat.deploy">
+<target name="tomcat.deploy" depends="tomcat.undeploy">
   <deploy url="${deploy.url}" username="${deploy.user}" password="${deploy.pass}" path="${deploy.context}" war="${deploy.war}"/>
 </target>
         
