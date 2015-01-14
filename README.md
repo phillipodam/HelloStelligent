@@ -1,5 +1,7 @@
 # HelloStelligent
 
+The following has been tested on CentOS 6.3
+
 To build and deploy use the command update.sh
 
 This process assumes the server to host the application exists and has the following setup
