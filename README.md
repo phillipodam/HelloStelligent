@@ -8,3 +8,7 @@ This process assumes the server to host the application exists and has the follo
  - maven
  - ant
  - git
+
+To get this project issue the command git clone https://github.com/phillipodam/HelloStelligent.git
+
+To build and deploy the application issue the following cd HelloStelligent; sh update.sh
